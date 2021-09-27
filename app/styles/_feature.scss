@@ -1,5 +1,15 @@
 .feature{
+
+  background-color: $lightGrayishBlue;
+  text-align: center;
+
+  @include breakpoint-up(medium){
+    text-align: left;
+  }
   &__intro{
+
+    margin-bottom: toRem(60);
+
     @include breakpoint-up(large){
       width: 60%;
     }
@@ -22,13 +32,26 @@
     }
   }
   &__icon{
+    margin-bottom: toRem(30);
 
+    @include breakpoint-up(large){
+      margin-bottom: toRem(44);
+    }
   }
   &__title{
-
+    font-size: toRem(20);
+    font-weight: 300;
+    line-height: 1.15;
+    color: $darkBlue;
+    margin-bottom: toRem(16);
+    @include breakpoint-up(large){
+      font-size: toRem(24);
+      margin-bottom: toRem(34);
+    }
   }
   &__description{
-
+    font-size: toRem(14);
+    line-height: 1.5;
   }
 
 }

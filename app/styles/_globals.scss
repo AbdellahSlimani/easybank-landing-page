@@ -13,6 +13,7 @@ body{
     font-weight: 300;
     color: $grayishBlue;
     line-height: 1.3;
+    min-height: 200vh;
 
     @include breakpoint-up(large){
         font-size: $font-med;
@@ -61,27 +62,45 @@ a, a:visited, a:hover {
     margin: 0 auto;
 
     &--pall {
-        padding-top: toRem(36);
+        padding-top: toRem(70);
         padding-right:toRem(24);
-        padding-bottom: toRem(36);
+        padding-bottom: toRem(70);
         padding-left:toRem(24);
+
+        @include breakpoint-up(large){
+            padding-bottom: toRem(96);
+            padding-top: toRem(96);
+        }
     }
     &--py {
-        padding-top: toRem(36);
-        padding-bottom: toRem(36);
+        padding-top: toRem(70);
+        padding-bottom: toRem(70);
+
+        @include breakpoint-up(large){
+            padding-bottom: toRem(96);
+            padding-top: toRem(96);
+        }
     }
     &--px {
         padding-right:toRem(24);
         padding-left:toRem(24);
     }
     &--pt {
-        padding-top: toRem(36);
+        padding-top: toRem(70);
+
+        @include breakpoint-up(large){
+            padding-top: toRem(96);
+        }
     }
     &--pr {
         padding-right:toRem(24);
     }
     &--pb {
-        padding-bottom: toRem(36);
+        padding-bottom: toRem(70);
+
+        @include breakpoint-up(large){
+            padding-bottom: toRem(96);
+        }
     }
     &--pl {
         padding-left:toRem(24);
