@@ -10,6 +10,7 @@
   &__grid{
     display: grid;
     grid-template-columns: 1fr;
+    gap: toRem(30);
 
     @include breakpoint-up(medium){
       grid-template-columns: repeat(2, 1fr);
@@ -21,26 +22,47 @@
   }
 
   &__item{
+    border-radius: toRem(5);
+    overflow: hidden;
+    background-color: $white;
+    box-shadow: 0px 3px  12px rgba(0, 0, 0, 0.15);
+    transition: all 150ms ease-in-out;
 
+    &:hover {
+      transform: scale(1.05);
+    }
   }
   
   &__image{
+    height: toRem(200);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
   }
 
   &__text{
-
+    
+    padding: toRem(30) toRem(30) toRem(40) toRem(30) ;
+    color: $grayishBlue;
+    @include breakpoint-up(medium) {
+      padding: toRem(30) toRem(25);
+    }
   }
 
   &__author{
-
+    font-size:toRem(10);
+    margin-bottom: toRem(12);
   }
 
   &__title{
-
+    font-size: toRem(17);
+    line-height: 1.2;
+    color: $darkBlue;
+    margin-bottom: toRem(8);
   }
 
   &__description{
-
+    font-size: toRem(13)
   }
 }
